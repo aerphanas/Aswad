@@ -1,0 +1,33 @@
+name: Crystal CI
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Install Crystal
+      uses: crystal-lang/install-crystal@v1
+
+    - name: Cache shards
+      uses: actions/cache@v2
+      with:
+        path: ~/.cache/shards
+        key: ${{ runner.os }}-shards-${{ hashFiles('shard.yml') }}
+        restore-keys: ${{ runner.os }}-shards-
+    
+    - name: Install dependencies
+      run: shards install
+    
+    - name: Build crystal
+      run: crystal build src/aswad.cr
+
+    - name: Run Shards
+      run: shard run
+      

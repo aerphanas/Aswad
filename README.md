@@ -2,6 +2,14 @@
 
 TODO: Write a description here
 
+## Prerequisites
+
+# Ubuntu
+```sh
+sudo snap install crystal --classic
+sudo apt-get install gcc pkg-config git tzdata libpcre3-dev libevent-dev libyaml-dev libgmp-dev libssl-dev libxml2-dev libz-dev
+```
+
 ## Installation
 
 TODO: Write installation instructions here

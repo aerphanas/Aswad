@@ -1,0 +1,13 @@
+name: aswad
+version: 0.1.0
+
+authors:
+  - Muhammad Aviv Burhanudin <muhamadaviv14@gmail.com>
+
+targets:
+  aswad:
+    main: src/aswad.cr
+
+crystal: 1.2.2
+
+license: MIT

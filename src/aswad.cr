@@ -1,5 +1,6 @@
 require "http/client"
 require "option_parser"
+require "json"
 
 module Aswad
   VERSION = "0.1.0"
@@ -9,7 +10,8 @@ module Aswad
   tanggal = "30"
   idkota = "1609"
   
-  request = "https://api.myquran.com/v1/sholat/jadwal/#{idkota}/#{tahun}/#{bulan}/#{tanggal}"
-  p! request
-  puts "hello world"
+  url = "https://api.myquran.com/v1/sholat/jadwal/#{idkota}/#{tahun}/#{bulan}/#{tanggal}"
+  request = HTTP::Client.get url
+  #p! request.body
+  puts JSON.parse(request.body).to_pretty_json
 end

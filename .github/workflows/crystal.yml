@@ -29,5 +29,5 @@ jobs:
       run: crystal build src/aswad.cr
 
     - name: Run Shards
-      run: shard run
+      run: shards run
       

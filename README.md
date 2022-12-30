@@ -1,5 +1,7 @@
 # aswad WIP
 
+[![Crystal CI](https://github.com/aerphanas/Aswad/actions/workflows/crystal.yml/badge.svg)](https://github.com/aerphanas/Aswad/actions/workflows/crystal.yml)
+
 TODO: Write a description here
 
 ## Prerequisites

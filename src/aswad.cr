@@ -19,4 +19,4 @@ idkota = JSON.parse(request.body)["data"][0]["id"].to_s
 url = "#{urlSholat}jadwal/#{idkota}/#{tahun}/#{bulan}/#{tanggal}"
 #p! request.body
 #p! JSON.parse(request.body)["data"][0]["id"].to_s
-puts JSON.parse(HTTP::Client.get(url).body)["data"]["jadwal"].to_pretty_json
+p! JSON.parse(HTTP::Client.get(url).body)["data"]["jadwal"].to_pretty_json

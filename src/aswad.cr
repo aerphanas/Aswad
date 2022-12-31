@@ -4,7 +4,7 @@ require "json"
 
 class ApiQuran
     property target
-    getter idkota
+    getter idkota, jadwal
 
     def initialize(target : String, kota : String)
         @target = target
@@ -39,7 +39,8 @@ end
 
 cek = ApiQuran.new "sholat", "jakarta"
 waktu = {"imsak", "subuh", "terbit", "dhuha", "dzuhur", "ashar", "maghrib", "isya"}
-puts "berikut adalah jadwal waktu solat untuk #{cek.getScheduleNow["tanggal"]}"
+jadwals = cek.getScheduleNow
+puts "berikut adalah jadwal waktu solat untuk #{jadwals["tanggal"]}"
 waktu.each do |x|
-    puts  x + "\t- " + cek.getScheduleNow[x].to_s
+    puts  x + "\t- " + jadwals[x].to_s
 end

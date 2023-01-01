@@ -44,7 +44,7 @@ waktu = {"imsak", "subuh", "terbit", "dhuha", "dzuhur", "ashar", "maghrib", "isy
 
 OptionParser.parse do |parser|
   parser.banner = "Usage: aswad [arguments]"
-  parser.on("-c NAME", "--city=NAME", "Specifies the name to salute") do |name|
+  parser.on("-c NAME", "--city=NAME", "the name of the city you want to search for") do |name|
     destination = name
   end
   parser.on("-h", "--help", "Show this help") do

@@ -2,36 +2,31 @@
 
 [![Crystal CI](https://github.com/aerphanas/Aswad/actions/workflows/crystal.yml/badge.svg)](https://github.com/aerphanas/Aswad/actions/workflows/crystal.yml)
 
-TODO: Write a description here  
-current development  
-![screenshot](https://ik.imagekit.io/ei818rceo5ypg/Screenshot_from_2022-12-31_19-04-07_hLCKj95Hu.png?ik-sdk-version=javascript-1.4.3&updatedAt=1672488499295)
+this project aim to be unofficial interface of API myquran.com  
+provide :
+- [x] Prayer Times
+- [ ] interpretation of the Koran
 
 ## Prerequisites
 
-# for Ubuntu
-```sh
-sudo snap install crystal --classic
-sudo apt-get install gcc pkg-config git tzdata libpcre3-dev libevent-dev libyaml-dev libgmp-dev libssl-dev libxml2-dev libz-dev
-```
-
-# for alpine linux
-
-```sh
-sudo apk add crystal shards
-sudo apk add zlib-dev openssl-dev
-```
+- crystal v1.2.2
+- zlib (libz)
+- openssl (libssl, libcrypto)
 
 ## Installation
 
-TODO: Write installation instructions here
+```sh
+git clone https://github.com/aerphanas/Aswad.git
+cd Aswad
+crystal build --release ./src/aswad.cr -o ./bin/aswad
+```
 
 ## Usage
 
-TODO: Write usage instructions here
-
-## Development
-
-TODO: Write development instructions here
+```sh
+./bin/aswad -c <city name> # Get Current Prayer Times 
+./bin/aswad -h # More Information on a Command.
+```
 
 ## Contributing
 
@@ -43,4 +38,4 @@ TODO: Write development instructions here
 
 ## Contributors
 
-- [Muhammad Aviv Burhanudin](https://github.com/your-github-user) - creator and maintainer
+- [Muhammad Aviv Burhanudin](https://github.com/aerphanas) - creator and maintainer

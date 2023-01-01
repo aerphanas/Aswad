@@ -14,6 +14,13 @@ sudo snap install crystal --classic
 sudo apt-get install gcc pkg-config git tzdata libpcre3-dev libevent-dev libyaml-dev libgmp-dev libssl-dev libxml2-dev libz-dev
 ```
 
+# for alpine linux
+
+```sh
+sudo apk add crystal shards
+sudo apk add zlib-dev openssl-dev
+```
+
 ## Installation
 
 TODO: Write installation instructions here

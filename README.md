@@ -2,10 +2,7 @@
 
 [![Crystal CI](https://github.com/aerphanas/Aswad/actions/workflows/crystal.yml/badge.svg)](https://github.com/aerphanas/Aswad/actions/workflows/crystal.yml)
 
-this project aim to be unofficial interface of API myquran.com  
-provide :
-- [x] Prayer Times
-- [ ] interpretation of the Koran
+get current Prayer Time and more comming soon   
 
 ## Prerequisites
 
@@ -35,6 +32,10 @@ crystal build --release ./src/aswad.cr -o ./bin/aswad
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create a new Pull Request
+
+## Thanks so
+
+- [api.myquran.com](https://api.myquran.com/) for Prayer time api
 
 ## Contributors
 

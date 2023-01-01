@@ -1,4 +1,4 @@
-# aswad WIP
+# aswad
 
 [![Crystal CI](https://github.com/aerphanas/Aswad/actions/workflows/crystal.yml/badge.svg)](https://github.com/aerphanas/Aswad/actions/workflows/crystal.yml)
 

@@ -25,6 +25,12 @@ crystal build --release ./src/aswad.cr -o ./bin/aswad
 ./bin/aswad -h # More Information on a Command.
 ```
 
+## Docker
+
+```sh
+docker run --rm -it ghcr.io/aerphanas/aswad:latest
+```
+
 ## Contributing
 
 1. Fork it (<https://github.com/aerphanas/aswad/fork>)

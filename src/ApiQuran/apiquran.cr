@@ -33,10 +33,10 @@ class ApiQuran
       @idkota = JSON.parse(request.body)["data"][0]["id"]
       @lokasi = JSON.parse(request.body)["data"][0]["lokasi"]
     elsif @status == "false"
-      puts "error tidak ada kota dengan nama \"#{kota}\" dalam database"
+      puts "Error : tidak ada kota dengan nama \"#{kota}\" dalam database"
       exit 1
     else
-      puts "error"
+      puts "Error : terjadi masalah pada server"
       exit 1
     end
   end
@@ -51,8 +51,14 @@ class ApiQuran
     @jadwal = JSON.parse(request.body)["data"]["jadwal"]
   end
 
-  def getInterpretation(surah : UInt8, ayat : UInt8)
-    idtafsir = @ayahs[(surah - 1)] + ayat
+  def getInterpretation(surah : UInt8, ayat : UInt16)
+    jumlah_ayat = @ayahs[(surah)]
+    if ayat > jumlah_ayat
+      puts "Error : surat #{surah} dengan ayat #{ayat} tidak ada"
+      exit 1
+    else
+      idtafsir = @ayahs[(surah - 1)] + ayat
+    end
     url = "#{@url}#{@target}/quran/kemenag/id/#{idtafsir}"
     request = HTTP::Client.get url
     @status = JSON.parse(request.body)["status"].to_s
@@ -60,9 +66,9 @@ class ApiQuran
       @summary = JSON.parse(request.body)["data"][0]["text"].to_s
       @full = JSON.parse(request.body)["data"][1]["text"].to_s
     elsif @status == "false"
-      puts "error tidak ada surah #{surah.to_s} dan ayat #{ayat.to_s} dalam database"
+      puts "Error : tidak ada surah #{surah.to_s} dan ayat #{ayat.to_s} dalam database"
     else
-      puts "error"
+      puts "Error : terjadi masalah pada server"
       exit 1
     end
   end

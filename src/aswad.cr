@@ -58,7 +58,7 @@ if !target.empty?
     puts "Valid untuk #{jadwals["tanggal"]}\n"
   when "tafsir"
     get = ApiQuran.new("tafsir")
-    get.getInterpretation(surat.to_u8, ayat.to_u8)
+    get.getInterpretation(surat.to_u8, ayat.to_u16)
     puts "menampilkan tafsir \"#{surat}:#{ayat}\":\n\n"
     puts HTML.unescape(get.summary.to_s)
   else

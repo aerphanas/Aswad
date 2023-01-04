@@ -39,7 +39,7 @@ docker run --rm -it ghcr.io/aerphanas/aswad:latest
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create a new Pull Request
 
-## Thanks so
+## Thanks to
 
 - [api.myquran.com](https://api.myquran.com/) for Prayer time api
 
